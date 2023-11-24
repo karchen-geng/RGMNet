@@ -12,8 +12,8 @@ We used these packages/versions in the development of this project.
 
 ### Training
 
-Pre-training on static images: `CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port 1234 --nproc_per_node=2 train.py --id s0 --stage 0`
+Pre-training on static images: CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port 1234 --nproc_per_node=2 train.py --id s0 --stage 0
 
-Main training: `CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port 1234 --nproc_per_node=2 train.py --id s01 --load_network s0.pth  --stage 1
+Main training: CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python -m torch.distributed.launch --master_port 1234 --nproc_per_node=2 train.py --id s01 --load_network s0.pth  --stage 1
 
 
